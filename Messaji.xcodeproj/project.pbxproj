@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		662C74C0252A923600608687 /* 爺.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 662C74BF252A923600608687 /* 爺.jpg */; };
+		662C74C2252A924200608687 /* ばあ.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 662C74C1252A924200608687 /* ばあ.jpg */; };
 		66F34C2E252A7598002580A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F34C2D252A7598002580A9 /* AppDelegate.swift */; };
 		66F34C30252A7598002580A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F34C2F252A7598002580A9 /* SceneDelegate.swift */; };
 		66F34C32252A7598002580A9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66F34C31252A7598002580A9 /* MainViewController.swift */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		662C74BF252A923600608687 /* 爺.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "爺.jpg"; sourceTree = "<group>"; };
+		662C74C1252A924200608687 /* ばあ.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "ばあ.jpg"; sourceTree = "<group>"; };
 		66F34C2A252A7598002580A9 /* Messaji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Messaji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66F34C2D252A7598002580A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66F34C2F252A7598002580A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 		66F34C2C252A7598002580A9 /* Messaji */ = {
 			isa = PBXGroup;
 			children = (
+				662C74C1252A924200608687 /* ばあ.jpg */,
+				662C74BF252A923600608687 /* 爺.jpg */,
 				66F34C2D252A7598002580A9 /* AppDelegate.swift */,
 				66F34C2F252A7598002580A9 /* SceneDelegate.swift */,
 				66F34C44252A77EA002580A9 /* BeforeAddViewController.swift */,
@@ -135,7 +141,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				66F34C3A252A759B002580A9 /* LaunchScreen.storyboard in Resources */,
+				662C74C2252A924200608687 /* ばあ.jpg in Resources */,
 				66F34C37252A759B002580A9 /* Assets.xcassets in Resources */,
+				662C74C0252A923600608687 /* 爺.jpg in Resources */,
 				66F34C35252A7598002580A9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

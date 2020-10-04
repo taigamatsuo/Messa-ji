@@ -174,7 +174,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="gzQ-jc-r1N" id="xwE-GH-2p1"/>
+                        <outlet property="UserTable" destination="gzQ-jc-r1N" id="lRr-vZ-xu1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

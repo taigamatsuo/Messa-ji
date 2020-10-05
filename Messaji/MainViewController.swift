@@ -12,10 +12,11 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     @IBOutlet weak var UserTable: UITableView!
     
-    var UserPhoto = ["爺.jpg","ばあ.jpg"]
-    var UserName = ["taro","hanako"]
-    var Date = ["10","20"]
+    var UserPhoto = ["爺.jpg","ばあ.jpg",""]
+    var UserName = ["taro","hanako",""]
+    var Date = ["10","20",""]
     
+    //*遷移先の値に渡したい変数を格納する変数を定義する
     
     
     

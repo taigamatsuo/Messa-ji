@@ -62,7 +62,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XER-cl-TEl">
-                                <rect key="frame" x="72" y="519" width="270" height="34"/>
+                                <rect key="frame" x="72" y="543" width="270" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -76,7 +76,7 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" identifier="toUserTable" modalPresentationStyle="fullScreen" id="EeM-SX-ac0"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="56d-Mx-jIV">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.crop.circle.fill.badge.plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="56d-Mx-jIV">
                                 <rect key="frame" x="136" y="178" width="142" height="142"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
@@ -84,11 +84,26 @@
                                     <outletCollection property="gestureRecognizers" destination="q60-ym-LXE" appends="YES" id="zaT-U8-nVg"/>
                                 </connections>
                             </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="envelope" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="tCL-4Z-IZF">
+                                <rect key="frame" x="20" y="423" width="44" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bxE-qi-HiF">
+                                <rect key="frame" x="20" y="535" width="44" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ttf-k0-Nnp"/>
                     </view>
                     <navigationItem key="navigationItem" id="XgW-tL-XbD"/>
+                    <connections>
+                        <outlet property="AddEmail" destination="6gS-h1-zna" id="6g7-c9-zrG"/>
+                        <outlet property="AddImage" destination="56d-Mx-jIV" id="Jmi-Gx-fok"/>
+                        <outlet property="AddName" destination="XER-cl-TEl" id="5bg-Nb-4gI"/>
+                        <outlet property="E" destination="tCL-4Z-IZF" id="izS-gF-9nn"/>
+                        <outlet property="N" destination="bxE-qi-HiF" id="qSg-HZ-FVW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAW-Yp-0jm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="q60-ym-LXE">
@@ -183,6 +198,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sJj-B7-08p"/>
+        <segue reference="CPu-E0-giR"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="envelope" catalog="system" width="128" height="93"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="person.crop.circle.fill.badge.plus" catalog="system" width="128" height="101"/>
+    </resources>
 </document>

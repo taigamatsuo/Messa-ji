@@ -13,16 +13,14 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet weak var UserTable: UITableView!
     
     var UserPhoto = ["爺.jpg","ばあ.jpg",""]
-    var UserName = ["taro","hanako",""]
-    var Date = ["10","20",""]
+    var UserName = ["","",""]
+    var Date = ["0","20",""]
     
     //*遷移先の値に渡したい変数を格納する変数を定義する
-    
-    
+    var outputValue : String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
        UserTable.delegate = self
        UserTable.dataSource = self
     }
@@ -32,7 +30,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 1
     }
     
     func tableView(_ UserTable: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,7 +38,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         UserTableViewCell
         
         cell?.profileDate.text = self.Date[indexPath.row]
-        cell?.profileName.text = self.UserName[indexPath.row]
+        cell?.profileName.text = self.outputValue
         cell?.profileImage.image = UIImage(named: self.UserPhoto[indexPath.row])
         
         

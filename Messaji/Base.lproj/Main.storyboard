@@ -98,11 +98,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="XgW-tL-XbD"/>
                     <connections>
-                        <outlet property="AddEmail" destination="6gS-h1-zna" id="6g7-c9-zrG"/>
                         <outlet property="AddImage" destination="56d-Mx-jIV" id="Jmi-Gx-fok"/>
-                        <outlet property="AddName" destination="XER-cl-TEl" id="5bg-Nb-4gI"/>
                         <outlet property="E" destination="tCL-4Z-IZF" id="izS-gF-9nn"/>
+                        <outlet property="EmailText" destination="6gS-h1-zna" id="6g7-c9-zrG"/>
                         <outlet property="N" destination="bxE-qi-HiF" id="qSg-HZ-FVW"/>
+                        <outlet property="NameText" destination="XER-cl-TEl" id="5bg-Nb-4gI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AAW-Yp-0jm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -198,7 +198,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CPu-E0-giR"/>
+        <segue reference="EeM-SX-ac0"/>
+        <segue reference="sJj-B7-08p"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="envelope" catalog="system" width="128" height="93"/>

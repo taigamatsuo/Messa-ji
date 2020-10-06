@@ -21,7 +21,7 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // imagePickerController.delegate = self
+       // imagePickerController.delegate = self
         // 画像をタップすることを可能に
         self.AddImage.isUserInteractionEnabled = true
     }
@@ -46,13 +46,6 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate {
      }
     }
     
-    func  imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        
-        let image = info[.originalImage] as? UIImage
-        AddImage.image = image
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     
       // タップされたときの処理
     @IBAction func tapped(sender: UITapGestureRecognizer){
@@ -63,20 +56,34 @@ class AddUserViewController: UIViewController, UIImagePickerControllerDelegate {
         //OKボタン
         alert.addAction(UIAlertAction(title:"OK",style: .default, handler: { action in
             //ボタンが押された時の動作
-            print("押されました!")
+            print("OKが押されました")
+            //フォトライブラリの画像を呼び出す
             var imagePickerController : UIImagePickerController = UIImagePickerController()
             imagePickerController.sourceType = UIImagePickerController.SourceType.photoLibrary
             imagePickerController.allowsEditing = true
-        }
+            self.present(imagePickerController,animated: true , completion: nil)
+            }
         ))
         alert.addAction(UIAlertAction(title:"Cancel",style: .default, handler: nil))
-    
         present(alert,animated: true, completion: nil)
-          //プロフィール写真を選択
-
-
-          //選択ボタンが押された時の動作
     }
-
 }
-   
+
+    extension AddUserViewController {
+    
+    func  imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+    
+        //選択された画像を取得
+        guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage?
+            else {return}
+        //画像を変更
+        self.AddImage.image = selectedImage
+        print("画像が選択されました")
+        //imagepickerの削除
+        self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+
+    
+

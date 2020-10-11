@@ -20,8 +20,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
        @IBOutlet weak var N: UIImageView!
     
        var saveData : UserDefaults = UserDefaults.standard
-   
+       var Userimage : UIImage!
       
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,20 +34,28 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         EmailText.text = saveData.object(forKey: "key_EmailText") as? String
         NameText.text  = saveData.object(forKey: "key_NameText") as? String
         TextView.text  = saveData.object(forKey: "key_TextView") as? String
-              
         
 
-        }
+       let ImageData = saveData.data(forKey: "key_AddImage")
+       // Data型からUIImage型へ変換
+       let Userimage2 = UIImage(data: ImageData!)
+       Userimage = Userimage2
+       AddImage.image = Userimage
+        
+    }
          
 
-    //登録ボタンで値をKeyChainへ保存する
-    @IBAction func save(){
+    //登録ボタンで値をuserdefaultsへ保存する
+        @IBAction func save() {
         print("登録しました")
        
         saveData.set(EmailText.text, forKey: "key_EmailText")
         saveData.set(NameText.text, forKey: "key_NameText")
         saveData.set(TextView.text, forKey: "key_TextView")
-       
+        
+       let data = Userimage.pngData()
+       saveData.set(data, forKey: "key_AddImage")
+
     }
     
     
@@ -82,16 +92,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             //選択された画像を取得
             guard let selectedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage?
                 else {return}
+            
+            Userimage = selectedImage
             //画像を変更
-            self.AddImage.image = selectedImage
+            self.AddImage.image = Userimage
             print("画像が選択されました")
             //imagepickerの削除
             self.dismiss(animated: true, completion: nil)
             }
         }
-
-       
-
 
 
     
